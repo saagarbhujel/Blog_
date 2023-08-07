@@ -29,7 +29,7 @@ const NavBar = () => {
           About
         </li>
       </Link>
-      <Link href="/contact">
+      <Link href="/blogs">
         <li className="cursor-pointer text-[20px] ">
           Blogs
         </li>
