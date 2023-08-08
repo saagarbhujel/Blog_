@@ -1,24 +1,15 @@
-import * as fs from 'fs';
-import { NextResponse } from "next/server";
+import * as fs from "fs";//this is import for accessing local json files
+import { NextResponse, NextRequest } from "next/server";
 
+export function GET(response: NextResponse, request: NextRequest) {
+  try {
+    const data = fs.readFileSync("blog-data/blog1.json", "utf8"); //accessing json file 
+    const parsedData = JSON.parse(data);//convert to object
 
-export  function GET( response:NextResponse){
-   try {
-    const data = fs.readFileSync('blogdata/blog1.json', 'utf8');
-    const parsedData = JSON.parse(data);
-   return NextResponse.json(parsedData)
-   } catch (error) {
-    return NextResponse.json({message:"error", success: false})
-   }
- 
-   
+    // console.log(request.query.slug);
+
+    return NextResponse.json(parsedData);  //send response 
+  } catch (error) {
+    return NextResponse.json({ message: "error", success: false });
+  }
 }
-
-
-
-
-
-
-
-
-
