@@ -35,7 +35,7 @@ fetchedBlog()
   {blogs.map((blog,index) =>{
     return (
    
-        <Link  key={uniqid()} href="/blogs/learnNext">
+        <Link  key={uniqid()} href={`/blogs/${blog.slug}`}>
           <div className=" max-w-sm border border-solid border-black mt-8  transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-110 duration-300 rounded-[5px]">
             <div className="">
               <img
