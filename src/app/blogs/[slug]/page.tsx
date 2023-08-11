@@ -1,29 +1,33 @@
-"use client";
 
-import axios from "axios";
 
-import React, { useState, useEffect } from "react";
+import axios,{AxiosError} from "axios";
+import React from "react";
 import Image from "next/image";
-const Page = ({ params }: { params: { slug: string } }) => {
-  const [blog, setBlog] = useState({
-    title: "",
-    content: "",
-  });
 
-  const fetchedBlogitem = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3000/api/users/getblog?slug=${params.slug}`
-      );
-      // console.log(response.data);
-      setBlog(response.data);
-    } catch (error: any) {
-      console.log(error.message);
-    }
+type Params = {
+  params: {
+    slug: string;
   };
-  useEffect(() => {
-    fetchedBlogitem();
-  }, []);
+};
+
+const fetchedBlogitem = async ( {params}:Params) => {
+  try {
+    const response = await axios.get(
+      `http://localhost:3000/api/users/getblog?slug=${params.slug}`
+    );
+    return response.data;
+  } catch (error) {
+    const err = error as AxiosError
+    return error;
+  }
+};
+
+const Page = async (params:Params) => {
+  const blog = await fetchedBlogitem(params);
+  // console.log(blog);
+  
+
+ 
   return (
     <>
       <div className="relative max-w-screen-xl px-4 py-10 mx-auto md:flex md:py-10 gap-x-6 md:flex-row">
