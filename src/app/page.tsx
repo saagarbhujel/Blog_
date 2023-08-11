@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-    <div className=''>Home</div>
+      <div className="mt-[6rem]">Home</div>
     </>
-  )
+  );
 }

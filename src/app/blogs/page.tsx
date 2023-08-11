@@ -30,13 +30,14 @@ const Blogs = async() => {
   
   return (
     <>
- 
-      <h2 className=" text-center text-6xl underline mt-12 mb-12">Blogs</h2>
+      <h2 className=" text-center text-6xl underline  mb-12 mt-[6rem] cursor-default ">
+        Blogs
+      </h2>
       <div className=" grid md:grid-cols-2  content-center lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-8 mb-8 ">
-        {blogs.map((blog:Blog) => {
+        {blogs.map((blog: Blog) => {
           return (
             <Link key={uniqid()} href={`/blogs/${blog.slug}`}>
-              <div className=" max-w-[20rem] lg:max-w-[18rem] border border-solid border-black mt-8  transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-110 duration-300 rounded-[5px]">
+              <div className=" max-w-[20rem] lg:max-w-[18rem] border border-solid border-black mt-8  transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-105 duration-300 rounded-[5px]">
                 <div className="">
                   <Image
                     width={500}
@@ -54,8 +55,8 @@ const Blogs = async() => {
                   </div>
                 </div>
               </div>
-            </Link> 
-           );
+            </Link>
+          );
         })}
       </div>
     </>
