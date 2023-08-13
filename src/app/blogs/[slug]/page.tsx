@@ -4,12 +4,17 @@ import axios,{AxiosError} from "axios";
 import React from "react";
 import Image from "next/image";
 
+
+
 type Params = {
   params: {
     slug: string;
   };
 };
 
+const sanitizedData = (c:string) => ({
+  __html:c
+})
 const fetchedBlogitem = async ( {params}:Params) => {
   try {
     const response = await axios.get(
@@ -44,7 +49,13 @@ const Page = async (params:Params) => {
             alt="coding img"
           />
           <div className="mt-[48px] max-w-2xl">
-            <p className="pl-6 pr-6 ">{blog && blog.content}</p>
+          {blog && (
+            <section
+              className="pl-6 pr-6"
+              dangerouslySetInnerHTML={sanitizedData(blog.content)}
+            ></section>
+          )}
+           
           </div>
         </article>
       </div>
