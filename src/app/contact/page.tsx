@@ -47,9 +47,9 @@ const Contact = () => {
   return (
     <>
     <div><Toaster/></div>
-      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-        <div className="w-full max-w-md p-6 bg-white rounded shadow-md">
-          <h1 className="text-2xl font-semibold mb-4">Contact Us</h1>
+      <div className=" min-h-screen flex items-center justify-center">
+        <div className="w-full max-w-md p-6  rounded-[10px] shadow-2xl shadow-slate-400">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Contact Us</h3>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
