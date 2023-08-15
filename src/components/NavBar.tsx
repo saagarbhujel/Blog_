@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <>
       {/* For bigger devices */}
-      <nav className="fixed top-0 w-full flex justify-between h-[71px]  mx-w-[1240px] mx-auto px-4 bg-white text-black py-3 text-lg z-10">
+      <nav className="fixed top-0 w-full flex justify-between h-[71px]  mx-w-[1240px] mx-auto px-4 bg-white text-black py-3 text-lg z-10 border-b ">
         <h1 className="text-3xl font-bold text-[0000] flex items-center">
           Blog
         </h1>
@@ -91,6 +91,7 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
+      
       </nav>
     </>
   );
