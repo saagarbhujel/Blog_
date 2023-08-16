@@ -3,8 +3,8 @@ import Image from "next/image";
 const Testimonial = () => {
   return (
    <>
-    <section className=" grid content-center md:grid-cols-2 justify-items-center lg:grid-cols-3 xl:grid-cols-2 mt-8 mb-8 ml-56 mr-56">
-          <div className="border w-[36rem]  p-4 mb-6 hover:border-black  transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-105 duration-300 rounded-[5px]">
+    <section className="flex flec-col md:flex-row justify-center  items-center   mt-8 mb-8 lg:gap-[4rem] xl:gap-[6rem]">
+          <div className="border w-[16rem] lg:w-[25rem] xl:w-[30rem] 2xl:w-[36rem] p-4 mb-6 hover:border-black  transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-105 duration-300 rounded-[5px]">
             <div className="flex items-center mb-4">
               <Image
                 className="w-12 h-12 rounded-full mr-4"
@@ -25,7 +25,7 @@ const Testimonial = () => {
               attractive designs quickly.&ldquo;
             </p>
           </div>
-          <div className="border max-w-xl p-4 mb-6 hover:border-black transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-105 duration-300 rounded-[5px]">
+          <div className="border   w-[16rem] lg:w-[25rem] xl:w-[30rem] 2xl:w-[36rem] p-4 mb-6 hover:border-black transition ease-in-out delay-15 md:hover:-translate-y-1 hover:scale-105 duration-300 rounded-[5px]">
             <div className="flex items-center mb-4  ">
               <Image
                 className="w-12 h-12 rounded-full mr-4"

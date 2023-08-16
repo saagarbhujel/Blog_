@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <>
-     <section className="flex justify-around items-center px-4 my-10">
+     <section className="flex flex-col md:flex-row justify-around items-center px-8 my-10 ">
           <div className="md:order-2  transition duration-300 ease-in-out transform   rounded-[20px] border-2 p-5  hover:border-transparent border-gray-400 ">
             <Image
               width={500}
@@ -14,7 +14,7 @@ const Hero = () => {
               className=" rounded-[20px] "
             />
           </div>
-          <div className="md:order-1 max-w-[35rem]">
+          <div className="md:order-1 md:max-w-[25rem] max-w-[30rem]">
             <h1 className="text-3xl font-semibold mb-4">
               Welcome to Your Blog
             </h1>

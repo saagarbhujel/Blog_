@@ -31,7 +31,7 @@ const LatestBlog = async () => {
       <h2 className="text-center text-4xl underline  mt-6 mb-6 cursor-default">
         Popular Blogs
       </h2>
-      <section className="flex items-center justify-center gap-[7rem] mt-4 mb-12 ">
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 md:p-8 md:gap-[2rem] mt-4 mb-12 ">
         {latestBlogs.map((blog: Blog) => {
           return (
             <Link key={uniqid()} href={`/blogs/${blog.slug}`}>
