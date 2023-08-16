@@ -1,7 +1,7 @@
 'use client'
 import axios from "axios";
 import React, {  useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const notifySuccess = () => toast.success('Thank you for contacting us. We will send you a notification email soon.');
